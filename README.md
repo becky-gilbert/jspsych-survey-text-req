@@ -2,8 +2,8 @@
 
 A version of the jsPsych survey-text plugin, but with additional options/features:
 
-* Allows required questions (forced response)
-* Allows optional default/placeholder text for text fields
+* Allows you to specify any required questions (forced response)
+* Allows optional default/placeholder text for text input fields
 * Focuses the first text input field when the page loads, so that the participant can start typing immediately
 
 See the markdown doc for details.

@@ -4,7 +4,7 @@ This document was copied directly from the [jsPsych survey-text plugin](http://d
 
 The survey-text-req plugin displays a set of questions with free response text fields. The participant types in answers. 
 
-This plugin differs from the jsPsych survey-text plugin in that it allows you to specify which questions, if any, require a response, and what placeholder/default text, if any, should be displayed in each text response field. It also adds the 'autofocus' attribute to the first response field, so that the participant can begin typing clicking the box.
+This plugin differs from the jsPsych survey-text plugin in that it allows you to specify which questions, if any, require a response, and what placeholder/default text, if any, should be displayed in each text response field. It also adds the 'autofocus' attribute to the first response field, so that the participant can begin typing without clicking the box.
 
 ## Parameters
 

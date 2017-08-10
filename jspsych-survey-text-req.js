@@ -59,7 +59,7 @@ jsPsych.plugins['survey-text-req'] = (function() {
       },
       button_label: {
         type: [jsPsych.plugins.parameterType.STRING],
-        default: '',
+        default: 'Next',
         no_function: false,
         description: ''
       }
@@ -74,10 +74,9 @@ jsPsych.plugins['survey-text-req'] = (function() {
     };
 
     // trial defaults
-    trial.preamble = typeof trial.preamble == 'undefined' ? "" : trial.preamble;
-    trial.required = typeof trial.required == 'undefined' ? null : trial.required;
-    //If button_label is empty, the browser's language will be used to determine the button label.
-    trial.button_label = typeof trial.button_label === 'undefined' ? '' : trial.button_label;
+    trial.preamble = typeof trial.preamble == 'undefined' ? plugin.info.parameters.preamble.default : trial.preamble;
+    trial.required = typeof trial.required == 'undefined' ? plugin.info.parameters.required.default : trial.required;
+    trial.button_label = typeof trial.button_label === 'undefined' ? plugin.info.parameters.button_label.default : trial.button_label;
 
     if (typeof trial.rows == 'undefined') {
       trial.rows = [];
@@ -91,10 +90,10 @@ jsPsych.plugins['survey-text-req'] = (function() {
         trial.columns.push(trial.columns.default);
       }
     }
-    if (typeof trial.values == 'undefined') {
-      trial.values = [];
+    if (typeof trial.placeholders == 'undefined') {
+      trial.placeholders = [];
       for (var i = 0; i < trial.questions.length; i++) {
-        trial.values.push("");
+        trial.placeholders.push("");
       }
     }
 

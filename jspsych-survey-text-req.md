@@ -17,7 +17,7 @@ preamble | string | empty string | HTML formatted string to display at the top o
 rows | array | 1 | The number of rows for the response text box. Array length must match `questions` array, with a numeric value for each entry indicating the number of rows for that question's box.
 columns | array | 40 | The number of columns for the response text box. Array length must match `questions` array, with a numeric value for each entry indicating the number of columns for that question's box.
 button_label | string | 'Next' | The text that appears on the button to finish the trial.
-required | array | false | An array of booleans.
+required | array | false | An array of booleans. If true, a response is required for the corresponding question before the participant can move on from the trial via a button press.
 placeholders | array | `[""]` | An array of strings. The strings will be used to populate the text response fields with default/placeholder text (disappears when the person starts typing). This is often used to give the participant an example of the type/format of response that you're looking for.
 
 ## Data Generated

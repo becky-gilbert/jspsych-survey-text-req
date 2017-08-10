@@ -79,6 +79,25 @@ jsPsych.plugins['survey-text-req'] = (function() {
     //If button_label is empty, the browser's language will be used to determine the button label.
     trial.button_label = typeof trial.button_label === 'undefined' ? '' : trial.button_label;
 
+    if (typeof trial.rows == 'undefined') {
+      trial.rows = [];
+      for (var i = 0; i < trial.questions.length; i++) {
+        trial.rows.push(trial.rows.default);
+      }
+    }
+    if (typeof trial.columns == 'undefined') {
+      trial.columns = [];
+      for (var i = 0; i < trial.questions.length; i++) {
+        trial.columns.push(trial.columns.default);
+      }
+    }
+    if (typeof trial.values == 'undefined') {
+      trial.values = [];
+      for (var i = 0; i < trial.questions.length; i++) {
+        trial.values.push("");
+      }
+    }
+
     // if any trial variables are functions
     // this evaluates the function and replaces
     // it with the output of the function
